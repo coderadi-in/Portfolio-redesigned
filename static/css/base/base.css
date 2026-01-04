@@ -151,8 +151,8 @@ body {
 /* -- BUTTONS -- */
 
 .btn {
-    padding: 10px;
-    border-radius: 8px;
+    padding: 20px 50px;
+    border-radius: 50px;
     border: none;
     cursor: pointer;
     text-align: center;
@@ -174,7 +174,6 @@ body {
     gap: 10px;
     font-weight: 500;
     background-color: var(--primary);
-    color: var(--background) !important;
 }
 
 .ot {
@@ -185,7 +184,6 @@ body {
 .fl {
     background-color: var(--primary);
     font-weight: 500;
-    color: var(--background) !important;
 }
 
 .disabled {
