@@ -1,0 +1,52 @@
+.header {
+    max-width: 1696px;
+    margin:  0 auto;
+}
+
+.header .content {padding: 20px;}
+
+.menu {cursor: pointer;}
+.menu:hover {color: var(--text-secondary);}
+
+.header .menu:hover .text {color: var(--text-secondary);}
+.header .menu:hover .bar {background-color: var(--text-secondary);}
+
+.header .bar {
+    width: 20px;
+    height: 2px;
+    background-color: var(--text);
+    margin: -1;
+}
+
+.nav {
+    background-color: #1A1A1DA0;
+    padding: 50px;
+    backdrop-filter: blur(10px);
+    height: 100dvh;
+    width: max(40%, 300px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1.84s linear(0, 0.01, 0.0376, 0.0795, 0.1325, 0.1939, 0.2611, 0.3319, 0.4042, 0.4766, 0.5475, 0.6159, 0.6807, 0.7414, 0.7973, 0.8482, 0.8939, 0.9343, 0.9696, 0.9997, 1.0251, 1.0459, 1.0624, 1.0751, 1.0843, 1.0904, 1.0938, 1.0948, 1.0938, 1.0911, 1.0871, 1.0821, 1.0762, 1.0698, 1.0631, 1.0563, 1.0494, 1.0427, 1.0362, 1.0301, 1.0243, 1.0191, 1.0142, 1.0099, 1.0061, 1.0028, 0.9999, 0.9976, 0.9956, 0.994, 0.9928, 0.992, 0.9914, 0.9911, 0.991, 0.9911, 0.9914, 0.9918, 0.9922, 0.9928, 0.9934, 0.994, 0.9947, 0.9953, 0.996, 0.9966, 0.9972, 0.9977, 0.9982, 0.9987, 0.9991, 0.9994, 0.9997, 1, 1.0002, 1.0004, 1.0006, 1.0007, 1.0008, 1.0008, 1.0008, 1.0009, 1.0008, 1.0008, 1.0008, 1.0007, 1.0007, 1.0006, 1.0006, 1.0005, 1.0004, 1.0004, 1.0003, 1.0003, 1.0002, 1.0002, 1.0001, 1.0001, 1.0001, 1, 1), opacity 1.84s ease;
+    display: none;
+}
+
+.nav .list {text-align: end;}
+
+.nav .list li {
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+}
+
+.nav.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.nav.show .list li {transform: translateX(0);}
+
+@media (max-width: 568px) {
+    .nav {padding: 20px;}
+}

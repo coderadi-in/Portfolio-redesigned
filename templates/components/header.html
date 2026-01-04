@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components/header.css') }}">
+
+<header class="header column">
+    <section class="content row h-sb">
+        <div class="menu open row gap-10">
+            <div class="bars column gap-10">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+            </div>
+            <span class="text title">Menu</span>
+        </div>
+
+        <a href="/" class="link">
+            <img src="{{ url_for('static', filename='assets/icons/logo.png') }}" alt="coderadi" class="logo">
+        </a>
+
+        <ul class="list row gap-10">
+            <li><a href="/work/" class="link">
+                    <span class="symbol fl-icon">handshake</span>
+                </a></li>
+            <li><a href="/coding-greatness/featured-projects" class="link">
+                    <span class="symbol fl-icon">folder_code</span>
+                </a></li>
+            <li><a href="mailto:adi@coderadi.in" class="link">
+                    <span class="symbol fl-icon">mail</span>
+                </a></li>
+        </ul>
+    </section>
+
+    <hr class="divider">
+</header>
+
+<nav class="nav column h-sb gap-20">
+    <div class="menu close row gap-10">
+        <span class="symbol">close</span>
+        <span class="text">Close</span>
+    </div>
+
+    <ul class="list column gap-10">
+        <li><a href="/coding-greatness/" class="link h3 title">Coding the greatness</a></li>
+        <li><a href="/projects/" class="link h3 title">Projects</a></li>
+        <li><a href="/work/" class="link h3 title">Work with us</a></li>
+        <li><a href="/about/" class="link h3 title">About coderadi</a></li>
+        <li><a href="/contact/" class="link h3 title">Contact us</a></li>
+    </ul>
+
+    <div class="row gap-10">
+        <img src="{{ url_for('static', filename='assets/icons/logo.png') }}" alt="coderadi" class="logo">
+        <span class="text">coderadi</span>
+    </div>
+</nav>
+
+<script src="{{ url_for('static', filename='js/components/header.js') }}"></script>
