@@ -1,0 +1,18 @@
+/* | HERO SECTION [START] */
+.hero .h1 {transition-delay: 0ms;}
+.hero .h3 {transition-delay: 200ms;}
+.hero .link {transition-delay: 400ms;}
+
+.hero {filter: blur(10px);}
+.hero * {
+    transform: translateY(100px);
+    opacity: 0;
+    transition-duration: 1s;
+}
+
+.hero.visible {filter: blur(0px);}
+.hero.visible * {
+    transform: translateY(0);
+    opacity: 1;
+}
+/* | HERO SECTION [END] */

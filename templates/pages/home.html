@@ -18,71 +18,26 @@
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/base/base.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations/home.css') }}">
 </head>
 <body>
     {% include 'components/header.html' %}
 
     <main class="main column gap-100">
         <section class="hero">
-            <img src="{{ url_for('static', filename='assets/images/bg-res.png') }}" alt="coderadi" class="img bg-res">
-
-            <section class="section column gap-20">
+            <section class="section column">
                 <div class="content column gap-50">
-                    <div class="text-content column gap-20">
-                        <h1 class="h1">coderadi &bull; Aditya</h1>
+                    <div class="text-content column gap-5">
+                        <h1 class="h1">coderadi</h1>
                         <h3 class="h3 title">coding the greatness</h3>
                     </div>
 
                     <a href="/projects/" class="link btn fl">Explore projects</a>
                 </div>
             </section>
-        </section>
-
-        <section class="performance">
-            <section class="section column gap-50 v-center">
-                <div class="head column gap-10">
-                    <h1 class="h1">The performance continues</h1>
-                    <h3 class="h3">Explore a curated selection offering a unique perspective of coderadi.</h3>
-                </div>
-
-                <div class="body grid gap-20">
-                    <a href="/coding-greatness/how-adi-became-coderadi" class="link article column">
-                        <div class="image-content">
-                            <img src="{{ url_for('static', filename='assets/images/bg.png') }}" alt="Article 1" class="img">
-                        </div>
-
-                        <div class="text-content column gap-10">
-                            <h2 class="h2">How Adi became coderadi</h2>
-                            <h3 class="h3">Explore a brief journey started from a scroll and a spark.</h3>
-                        </div>
-                    </a>
-                    
-                    <a href="/coding-greatness/first-app-built" class="link article column">
-                        <div class="image-content">
-                            <img src="{{ url_for('static', filename='assets/images/bg.png') }}" alt="Article 1" class="img">
-                        </div>
-
-                        <div class="text-content column gap-10">
-                            <h2 class="h2">The first application we built</h2>
-                            <h3 class="h3">Have a look on the first app we built - which will be revived soon.</h3>
-                        </div>
-                    </a>
-                    
-                    <a href="/coding-greatness/the-mission-now" class="link article column">
-                        <div class="image-content">
-                            <img src="{{ url_for('static', filename='assets/images/bg.png') }}" alt="Article 1" class="img">
-                        </div>
-
-                        <div class="text-content column gap-10">
-                            <h2 class="h2">The mission now</h2>
-                            <h3 class="h3">Reviving the idea once lost in prototypes. The one-place destination for everyone.</h3>
-                        </div>
-                    </a>
-                </div>
-            </section>
-        </section>
+        </section>        
     </main>
 
-    {% include 'components/footer.html' %}
+    <script src="{{ url_for('static', filename='js/pages/home.js') }}"></script>
 </body>
 </html>
