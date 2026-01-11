@@ -9,7 +9,58 @@
 /* | HERO SECTION [START] */
 .hero {
     background-image: url('/static/assets/images/bg.png');
-    object-fit: cover;
-    object-position: bottom right;
+    background-position: bottom right;
+    background-size: cover;
     height: 100dvh;
+}
+
+.hero .bg-res {display: none;}
+
+.hero .section {
+    height: 100%;
+    justify-content: end;
+}
+
+.hero .h1 {
+    font-size: 4rem;
+    text-transform: none;
+}
+
+.hero .link {width: fit-content;}
+/* | HERO SECTION [END] */
+
+/* | PERFORMANCE SECTION [START] */
+.performance .body {grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));}
+
+.performance .body .article .image-content {overflow: hidden;}
+.performance .body .article:hover .img {transform: scale(1.1);}
+
+.performance .body .image-content {
+    border-radius: 15px 15px 0 0;
+    border: 1px solid var(--border);
+    border-bottom: none;
+}
+
+.performance .body .img {border-radius: 15px 15px 0 0;}
+
+.performance .body .text-content {
+    padding: 20px;
+    border-radius: 0 15px;
+    border: 1px solid var(--border);
+    border-right: none;
+    border-top: none;
+}
+
+/* & RESPONSIVE VERSIONS */
+@media (max-width: 768px) {
+    .hero {
+        background-image: none;
+        height: auto;
+    }
+
+    .hero .bg-res {display: block;}
+}
+
+@media (max-width: 568px) {
+    .hero .h1 {font-size: 3rem;}
 }

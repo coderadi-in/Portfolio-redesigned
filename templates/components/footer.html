@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components/footer.css') }}">
+
+<footer class="footer column gap-20">
+    <h2 class="h2">coderadi</h2>
+
+    <section class="section res-row h-sb gap-50">
+        <div class="content column gap-50">
+            <div class="app-title column gap-10">
+                <a href="/" class="link">
+                    <img src="{{ url_for('static', filename='assets/icons/logo.png') }}" alt="Logo" class="logo">
+                </a>
+
+                <span class="text">Coding the greatness</span>
+            </div>
+
+            <div class="navigation flex gap-20">
+                <ul class="list column gap-10">
+                    <li><h3 class="h3">MAIN</h3></li>
+                    <li><a href="/projects/" class="link">Projects</a></li>
+                    <li><a href="/work/" class="link">Work with us</a></li>
+                    <li><a href="/about/" class="link">About coderadi</a></li>
+                    <li><a href="/contact/" class="link">contact us</a></li>
+                </ul>
+                
+                <ul class="list column gap-10">
+                    <li><h3 class="h3">CODING THE GREATNESS</h3></li>
+                    <li><a href="/coding-greatness/how-adi-became-coderadi" class="link">How Adi became coderadi</a></li>
+                    <li><a href="/coding-greatness/first-app-built" class="link">The first application we built</a></li>
+                    <li><a href="/coding-greatness/the-mission-now" class="link">The mission now</a></li>
+                </ul>
+            </div>
+
+            <ul class="list row gap-10">
+                <li><a href="https://www.instagram.com/coderadi.in" class="link">
+                    <img src="{{ url_for('static', filename='assets/icons/insta.png') }}" alt="instagram" class="icon">
+                </a></li>
+                <li><a href="https://github.com/coderadi-in" class="link">
+                    <img src="{{ url_for('static', filename='assets/icons/git.png') }}" alt="GitHub" class="icon">
+                </a></li>
+                <li><a href="https://www.youtube.com/@coderadi-in" class="link">
+                    <img src="{{ url_for('static', filename='assets/icons/yt.png') }}" alt="YouTube" class="icon">
+                </a></li>
+            </ul>
+        </div>
+
+        <div class="signature">
+            <img src="{{ url_for('static', filename='assets/images/signature.png') }}" alt="signature" class="img">
+        </div>
+    </section>
+</footer>
