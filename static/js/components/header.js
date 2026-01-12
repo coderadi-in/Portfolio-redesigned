@@ -9,31 +9,39 @@ navLinks.forEach((link, index) => {
     link.style.transitionDelay = `${index * 0.1 + 0.3}s`;
 });
 
+// * FUNCTION TO CLOSE NAVBAR
+function closeNavBar() {
+    navLinks.forEach(navlink => {
+        navlink.classList.remove('show');
+    })
+    
+    setTimeout(() => {
+        nav.classList.remove('show');
+    }, 500);
+
+    setTimeout(() => {
+        nav.style.display = "none";
+    }, 1000);
+}
+
 // & EVENT LISTENER TO OPEN NAV
 openNav.addEventListener('click', () => {
     nav.style.display = "flex";
 
     setTimeout(() => {
         nav.classList.add('show');
+        navLinks.forEach(navlink => {
+            navlink.classList.add('show');
+        })
     }, 100);
 });
 
 // & EVENT LISTENER TO CLOSE NAV
-closeNav.addEventListener('click', () => {
-    nav.classList.remove('show');
-
-    setTimeout(() => {
-        nav.style.display = "none";
-    }, 500);
-});
+closeNav.addEventListener('click', closeNavBar);
 
 // & EVENT LISTENERS TO CLOSE NAV WHEN BODY IS CLICKED
 document.body.addEventListener('click', (e) => {
     if (nav.classList.contains('show') && !e.target.closest('.nav') && !e.target.closest('.menu.open')) {
-        nav.classList.remove('show');
-
-        setTimeout(() => {
-            nav.style.display = "none";
-        }, 500);
+        closeNavBar();
     }
 });

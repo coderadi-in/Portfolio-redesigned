@@ -50,7 +50,7 @@
     opacity: 1;
 }
 
-.nav.show .list li {transform: translateX(0);}
+.nav .list li.show {transform: translateX(0);}
 
 @media (max-width: 568px) {
     .nav {padding: 20px;}
