@@ -26,7 +26,81 @@
 .hero .link {width: fit-content;}
 /* | HERO SECTION [END] */
 
+/* | SKILLS SECTION [START] */
+.skills {
+    background-image: url('/static/assets/images/skills.png');
+    background-position: top left;
+    background-size: cover;
+}
+
+.skills .skill {min-width: 400px;}
+.skills .divider {border-color: var(--text-secondary);}
+
+.skills .illustration {
+    font-size: 200px;
+    color: var(--primary);
+}
+
+.skills .bottom-line {
+    text-align: center;
+    max-width: 500px;
+}
+/* | SKILLS SECTION [END] */
+
+/* | ENDING SECTION [START] */
+.ending {position: relative;}
+
+.ending .img {
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.2;
+    filter: blur(5px);
+}
+/* | ENDING SECTION [END] */
+
+/* | ABOUT SECTION [START] */
+.about .story {
+    color: var(--text-secondary);
+    max-width: 700px;
+}
+
+.about .story .t-normal {color: var(--text);}
+
+.about .link {
+    width: fit-content;
+    border-radius: 8px;
+}
+/* | ABOUT SECTION [END] */
+
+/* | CONTACT SECTION [START] */
+.contact .section {
+    max-width: 700px;
+    margin: 0 0 0 auto;
+    text-align: right;
+}
+
+.contact .btn[type="submit"] {
+    font-weight: 500;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px;
+}
+
 /* & RESPONSIVE VERSIONS */
+@media (max-width: 1200px) {
+    .skills .top {
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+    }
+    .skills .illustration {display: none;}
+}
+
 @media (max-width: 568px) {
     .hero .h1 {font-size: 4rem;}
+    .skills .skill {min-width: auto;}
+    .skills .divider {order: 1;}
 }

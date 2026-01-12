@@ -28,6 +28,8 @@
     box-sizing: border-box;
     transition: all 0.3s;
     scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+    letter-spacing: 1px;
 }
 
 *::-webkit-scrollbar {display: none;}
