@@ -51,6 +51,7 @@
 }
 
 .nav .list li.show {transform: translateX(0);}
+.nav .list .link:hover {color: var(--text-secondary);}
 
 @media (max-width: 568px) {
     .nav {padding: 20px;}

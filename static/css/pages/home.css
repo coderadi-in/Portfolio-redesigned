@@ -9,7 +9,7 @@
 /* | HERO SECTION [START] */
 .hero {
     background-image: url('/static/assets/images/bg.png');
-    background-position: bottom right;
+    background-position: center left;
     background-size: cover;
     height: 100dvh;
 }
@@ -34,6 +34,7 @@
 }
 
 .skills .skill {min-width: 400px;}
+.skills .tech.right {text-align: right;}
 .skills .divider {border-color: var(--text-secondary);}
 
 .skills .illustration {
@@ -96,7 +97,9 @@
         align-items: start;
         width: 100%;
     }
+
     .skills .illustration {display: none;}
+    .skills .tech.right {text-align: left;}
 }
 
 @media (max-width: 568px) {

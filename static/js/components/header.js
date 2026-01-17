@@ -22,13 +22,10 @@ function closeNavBar() {
     setTimeout(() => {
         nav.style.display = "none";
     }, 1000);
-
-    document.body.style.pointerEvents = 'all';
 }
 
 // & EVENT LISTENER TO OPEN NAV
 openNav.addEventListener('click', () => {
-    document.body.style.pointerEvents = 'none';
     nav.style.display = "flex";
 
     setTimeout(() => {
@@ -40,7 +37,9 @@ openNav.addEventListener('click', () => {
 });
 
 // & EVENT LISTENER TO CLOSE NAV
-closeNav.addEventListener('click', closeNavBar);
+closeNav.addEventListener('click', () => {
+    closeNavBar();
+});
 
 // & EVENT LISTENERS TO CLOSE NAV WHEN BODY IS CLICKED
 document.body.addEventListener('click', (e) => {
