@@ -9,7 +9,7 @@
 /* | HERO SECTION [START] */
 .hero {
     background-image: url('/static/assets/images/bg.png');
-    background-position: center left;
+    background-position: center top;
     background-size: cover;
     height: 100dvh;
 }
@@ -28,82 +28,66 @@
 
 /* | SKILLS SECTION [START] */
 .skills {
-    background-image: url('/static/assets/images/skills.png');
-    background-position: top left;
-    background-size: cover;
+    height: 100vh;
+    position: relative;
 }
 
-.skills .skill {min-width: 400px;}
-.skills .tech.right {text-align: right;}
-.skills .divider {border-color: var(--text-secondary);}
+.skills .section {height: 100vh;}
 
-.skills .illustration {
+.skills .intro-h1 {
+    position: absolute;
+    z-index: -1;
+    font-size: 10vw;
+}
+
+.skills .grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+}
+
+.skills .grid .skill {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--surface);
+}
+
+.skills .skill .h1 {
+    font-size: 4rem;
+}
+
+.skills .skill .main-symbol {
     font-size: 200px;
-    color: var(--primary);
+    background: linear-gradient(45deg, var(--primary), #DFE7FF);
+    background-clip: text;
+    color: transparent;
 }
 
-.skills .bottom-line {
-    text-align: center;
-    max-width: 500px;
+.skills .skill .desc {min-width: 50%;}
+
+.skills .skill .symbol-normal {
+    font-size: 32px;
+    background-color: var(--background);
+    border-radius: 50px;
+    padding: 20px;
+    vertical-align: bottom;
 }
 /* | SKILLS SECTION [END] */
 
-/* | ENDING SECTION [START] */
-.ending {position: relative;}
-
-.ending .img {
-    position: absolute;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-    opacity: 0.2;
-    filter: blur(5px);
-}
-/* | ENDING SECTION [END] */
-
-/* | ABOUT SECTION [START] */
-.about .story {
-    color: var(--text-secondary);
-    max-width: 700px;
-}
-
-.about .story .t-normal {color: var(--text);}
-
-.about .link {
-    width: fit-content;
-    border-radius: 8px;
-}
-/* | ABOUT SECTION [END] */
-
-/* | CONTACT SECTION [START] */
-.contact .section {
-    max-width: 700px;
-    margin: 0 0 0 auto;
-    text-align: right;
-}
-
-.contact .btn[type="submit"] {
-    font-weight: 500;
-    color: var(--text);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 8px;
-}
-
 /* & RESPONSIVE VERSIONS */
-@media (max-width: 1200px) {
-    .skills .top {
-        flex-direction: column;
-        align-items: start;
-        width: 100%;
-    }
-
-    .skills .illustration {display: none;}
-    .skills .tech.right {text-align: left;}
+@media (max-width: 1440px) {
+    .skills .grid {grid-template-columns: 1fr;}
 }
 
 @media (max-width: 568px) {
     .hero .h1 {font-size: 4rem;}
-    .skills .skill {min-width: auto;}
-    .skills .divider {order: 1;}
+
+    .skills .skill .h1 {font-size: 3rem;}
+
+    .skills .skill .main-row {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .skills .skill .main-symbol {margin: 0 auto;}
 }

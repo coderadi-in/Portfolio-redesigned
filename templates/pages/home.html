@@ -41,116 +41,103 @@
             </section>
         </section>
 
-        <section class="skills">
-            <section class="section column gap-40 v-center">
-                <div class="top row gap-40 h-center">
-                    <div class="tech left column gap-40">
-                        <div class="skill column gap-10">
-                            <h1 class="h1">HTML | CSS | JS</h1>
-                            <hr class="divider">
-                            <span class="text">Frontend</span>
-                        </div>
+        <section class="skills" id="skills">
+            <section class="section center">
+                <h1 class="h1 intro-h1">My skills.</h1>
 
-                        <div class="skill column gap-10">
-                            <h1 class="h1">Flask</h1>
-                            <hr class="divider">
-                            <span class="text">Backend</span>
+                <div class="grid gap-20">
+                    <div class="skill column gap-20 h-sb">
+                        <span class="text">coderadi</span>
+                        <h1 class="h1">Technical skills and expertise.</h1>
+                        <span class="text">Short summary of familiar languages.</span>
+                    </div>
+                    
+                    <div class="skill column gap-20">
+                        <h2 class="h2">Frontend development</h2>
+
+                        <div class="row main-row gap-20 h-sb">
+                            <span class="symbol main-symbol">mobile_layout</span>
+
+                            <div class="desc column gap-20">
+                                <div class="row gap-10">
+                                    <span class="symbol symbol-normal">code</span>
+
+                                    <div class="column gap-5">
+                                        <h2 class="h2">Web</h2>
+                                        <span class="text">HTML | CSS | JS</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="row gap-10">
+                                    <span class="symbol symbol-normal">desktop_windows</span>
+
+                                    <div class="column gap-5">
+                                        <h2 class="h2">Desktop</h2>
+                                        <span class="text">Flet</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
+                    <div class="skill column gap-20">
+                        <h2 class="h2">Backend development</h2>
 
-                    <h1 class="h1 illustration">&lt;/&gt;</h1>
+                        <div class="row main-row gap-20 h-sb">
+                            <span class="symbol main-symbol">webhook</span>
 
-                    <div class="tech right column gap-40">
-                        <div class="skill column gap-10">
-                            <h1 class="h1">MySQL | PostgreSQL</h1>
-                            <hr class="divider">
-                            <span class="text">Database</span>
+                            <div class="desc column gap-20">
+                                <div class="row gap-10">
+                                    <span class="symbol symbol-normal">dns</span>
+
+                                    <div class="column gap-5">
+                                        <h2 class="h2">Codebase</h2>
+                                        <span class="text">Flask</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="row gap-10">
+                                    <span class="symbol symbol-normal">linked_services</span>
+
+                                    <div class="column gap-5">
+                                        <h2 class="h2">Integrations</h2>
+                                        <span class="text">Forms, Icons, Maps, etc</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    
+                    <div class="skill column gap-20">
+                        <h2 class="h2">Database</h2>
 
-                        <div class="skill column gap-10">
-                            <h1 class="h1">GitHub, Render</h1>
-                            <hr class="divider">
-                            <span class="text">Version control &amp; Hosting</span>
+                        <div class="row main-row gap-20 h-sb">
+                            <span class="symbol main-symbol">database</span>
+
+                            <div class="desc column gap-20">
+                                <div class="row gap-10">
+                                    <span class="symbol symbol-normal">join</span>
+
+                                    <div class="column gap-5">
+                                        <h2 class="h2">SQL</h2>
+                                        <span class="text">MySQL | PostgreSQL</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="row gap-10">
+                                    <span class="symbol symbol-normal">database_off</span>
+
+                                    <div class="column gap-5">
+                                        <h2 class="h2">NoSQL</h2>
+                                        <span class="text">MongoDB</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <span class="text bottom-line">Altogether we can build custom websites, web-apps that are fully
-                    functional with custom integrations.</span>
             </section>
         </section>
-
-        <div class="ending column gap-100">
-            <section class="about">
-                <section class="section column gap-20">
-                    <h1 class="h1">Beginning from a scroll and a spark</h1>
-
-                    <div class="story column gap-20">
-                        <p class="para">Every story needs a catalyst. <span class="t-normal">Mine arrived not in a
-                                classroom</span> or a library, but in the endless scroll of short-form videos.</p>
-
-                        <p class="para">At fifteen, I was adrift in a digital sea, another Gen-Z statistic consuming
-                            content
-                            mindlessly.</p>
-
-                        <p class="para">Then, <span class="t-normal">a single reel flickered across my screen</span>:
-                            "I'm
-                            taking the challenge to learn coding in one day." I scrolled past, as one does.</p>
-
-                        <p class="para"><span class="t-normal">But the seed was planted.</span> Hours later, a thought
-                            cut
-                            through the noise: "What if I tried for a week?"</p>
-
-                        <p class="para">That single week of curiosity rerouted my destiny.</p>
-
-                        <p class="para">The hours once lost to the digital ether were suddenly alight with code,
-                            transforming a
-                            passive consumer into an active creator.</p>
-
-                        <p class="para"><span class="t-normal">A hobby was born from a challenge.</span></p>
-                    </div>
-
-                    <a href="/coding-greatness/how-adi-became-coderadi" class="link btn fl">Read full story.</a>
-                </section>
-            </section>
-
-            <img src="{{ url_for('static', filename='assets/icons/logo.png') }}" alt="coderadi" class="img">
-            
-            <section class="contact">
-                <section class="section column gap-20">
-                    <h1 class="h1">Let's build something together</h1>
-                    <p class="para">Fill out the details below and we'll connect with you ASAP.</p>
-
-                    <form action="/contact/" method="post" class="form column gap-20">
-                        <div class="form-elem column gap-5">
-                            <label for="name">YOUR NAME*</label>
-                            <input required type="text" name="name" id="name" class="input"
-                                placeholder="E.g., John Doe">
-                        </div>
-
-                        <div class="form-elem column gap-5">
-                            <label for="email">YOUR EMAIL*</label>
-                            <input required type="email" name="email" id="email" class="input"
-                                placeholder="E.g., john@johndoe.com">
-                        </div>
-
-                        <div class="form-elem column gap-5">
-                            <label for="subject">BRIEF SUBJECT LINE*</label>
-                            <input required type="text" name="subject" id="subject" class="input"
-                                placeholder="E.g., I wanna work with you.">
-                        </div>
-
-                        <div class="form-elem column gap-5">
-                            <label for="message">YOUR MESSAGE</label>
-                            <textarea name="message" id="message" class="input"
-                                placeholder="Describe your idea below (optional)"></textarea>
-                        </div>
-
-                        <button type="submit" class="btn fl">Send message</button>
-                    </form>
-                </section>
-            </section>
-        </div>
     </main>
 
     <script src="{{ url_for('static', filename='js/pages/home.js') }}"></script>

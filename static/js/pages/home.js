@@ -1,8 +1,9 @@
 // ? GETTING DOCUMENT ELEMENTS
 const heroSection = document.querySelector('.hero');
+const skillsSection = document.querySelector('.skills');
 
 // & PREPARING OBSERVABLE SECTIONS ARRAY
-const observables = [heroSection];
+const observables = [heroSection, skillsSection];
 
 // ! INTERSECTION OBSERVER VALUES
 const observerOptions = {
@@ -16,9 +17,6 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-
-        } else {
-            entry.target.classList.remove('visible');
         }
     });
 }, observerOptions);
