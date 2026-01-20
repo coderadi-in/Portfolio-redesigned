@@ -45,6 +45,8 @@ body {
     min-height: 100vh;
 }
 
+.main {background-color: var(--background);}
+
 /* -- FLEX -- */
 .flex {display: flex;}
 .fcol {flex-direction: column;}

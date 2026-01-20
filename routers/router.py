@@ -11,6 +11,11 @@ router = Blueprint('router', __name__)
 def home():
     return render_template('pages/home.html')
 
+# & CODING-THE-GREATNESS ROUTE
+@router.route('/coding-greatness/')
+def coding_greatness():
+    return render_template('pages/coding-greatness.html')
+
 # & PROJECTS ROUTE
 @router.route('/projects/')
 def projects():
