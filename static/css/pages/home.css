@@ -66,7 +66,13 @@
 }
 
 .skills .skill .tag {color: var(--text-secondary);}
+/* | SKILLS SECTION [END] */
 
+/* | CONTACT SECTION [START] */
+.contact .form {
+    max-width: 700px;
+    width: 100%;
+}
 
 /* & RESPONSIVE VERSIONS */
 @media (max-width: 568px) {

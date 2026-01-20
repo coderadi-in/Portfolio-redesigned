@@ -98,6 +98,36 @@
                 </div>
             </section>
         </section>
+
+        <section class="contact" id="contact">
+            <section class="section column gap-50 v-center">
+                <h1 class="h1">Request information</h1>
+
+                <form action="/contact/" method="post" class="form column gap-20">
+                    <div class="form-elem column gap-5">
+                        <label for="name">Name*</label>
+                        <input required type="text" name="name" id="name" class="input" placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-elem column gap-5">
+                        <label for="email">Email*</label>
+                        <input required type="email" name="email" id="email" class="input" placeholder="you@yourdomain.com">
+                    </div>
+
+                    <div class="form-elem column gap-5">
+                        <label for="subject">Subject*</label>
+                        <input required type="text" name="subject" id="subject" class="input" placeholder="Briefly tell us your enquiry purpose">
+                    </div>
+
+                    <div class="form-elem column gap-5">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" class="input" placeholder="Type your enquiry here"></textarea>
+                    </div>
+
+                    <button type="submit" class="link btn fl">Send request</button>
+                </form>
+            </section>
+        </section>
     </main>
 
     <script src="{{ url_for('static', filename='js/pages/home.js') }}"></script>
