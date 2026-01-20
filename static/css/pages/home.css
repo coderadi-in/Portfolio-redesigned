@@ -1,3 +1,10 @@
+/* & CUSTOM VALUES */
+@property --fill {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 0%;
+}
+
 /* | HEADER */
 .header {
     position: fixed;
@@ -27,67 +34,41 @@
 /* | HERO SECTION [END] */
 
 /* | SKILLS SECTION [START] */
-.skills {
-    height: 100vh;
+.skills .grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.skills .skill .symbol {
+    background-color: var(--surface);
+    width: fit-content;
+    padding: 20px;
+    border-radius: 50px;
     position: relative;
 }
 
-.skills .section {height: 100vh;}
-
-.skills .intro-h1 {
+.skills .skill .symbol::after {
+    content: '';
     position: absolute;
     z-index: -1;
-    font-size: 10vw;
+    border-radius: inherit;
+    inset: -3px;
+    transition: --fill 600ms ease-in-out;
+
+    background: conic-gradient(
+        var(--primary) var(--fill),
+        transparent var(--fill)
+    );
 }
 
-.skills .grid {
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
-    height: 100%;
+.skills .skill:hover .symbol {
+    color: var(--primary);
+    --fill: 100%
 }
 
-.skills .grid .skill {
-    padding: 20px;
-    border-radius: 8px;
-    background-color: var(--surface);
-}
+.skills .skill .tag {color: var(--text-secondary);}
 
-.skills .skill .h1 {
-    font-size: 4rem;
-}
-
-.skills .skill .main-symbol {
-    font-size: 200px;
-    background: linear-gradient(45deg, var(--primary), #DFE7FF);
-    background-clip: text;
-    color: transparent;
-}
-
-.skills .skill .desc {min-width: 50%;}
-
-.skills .skill .symbol-normal {
-    font-size: 32px;
-    background-color: var(--background);
-    border-radius: 50px;
-    padding: 20px;
-    vertical-align: bottom;
-}
-/* | SKILLS SECTION [END] */
 
 /* & RESPONSIVE VERSIONS */
-@media (max-width: 1440px) {
-    .skills .grid {grid-template-columns: 1fr;}
-}
-
 @media (max-width: 568px) {
     .hero .h1 {font-size: 4rem;}
-
-    .skills .skill .h1 {font-size: 3rem;}
-
-    .skills .skill .main-row {
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .skills .skill .main-symbol {margin: 0 auto;}
 }
