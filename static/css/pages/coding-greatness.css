@@ -1,0 +1,17 @@
+/* | HEADER SECTION */
+.header {
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+/* | HERO SECTION [START] */
+.hero {
+    height: 100vh;
+    background-image: url('/static/assets/images/coding-greatness.png');
+    background-size: cover;
+}
+
+.hero .section {height: 100%;}
+.hero .h1 {font-size: 3rem;}
+/* | HERO SECTION [END] */
