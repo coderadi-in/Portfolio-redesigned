@@ -31,8 +31,55 @@
         <section class="hero">
             <section class="section center">
                 <h1 class="h1">Coding the Greatness</h1>
+                <span class="symbol">keyboard_arrow_down</span>
             </section>
         </section>
+
+        <section class="articles" id="articles">
+            <section class="section column gap-50">
+                <div class="head column v-center gap-10">
+                    <h1 class="h1">The performance continues</h1>
+                    <p class="para">Explore a curated selection of articles offering a unique perspective of coderadi.</p>
+                </div>
+
+                <div class="body grid gap-20">
+                    <a href="/coding-greatness/articles/how-adi-became-coderadi" class="link article column">
+                        <div class="img-content">
+                            <img src="{{ url_for('static', filename='assets/articles/how-adi-became-coderadi.png') }}" alt="Aditya clicking photo with a friend" class="img">
+                        </div>
+
+                        <div class="text-content column gap-10">
+                            <h2 class="h2">How adi became coderadi</h2>
+                            <p class="para">Explore a brief journey that started from the scroll and a spark.</p>
+                        </div>
+                    </a>
+                    
+                    <a href="/coding-greatness/articles/the-first-app-built" class="link article column">
+                        <div class="img-content">
+                            <img src="{{ url_for('static', filename='assets/articles/the-first-app-built.png') }}" alt="The first app built by coderadi" class="img">
+                        </div>
+
+                        <div class="text-content column gap-10">
+                            <h2 class="h2">The first application we built</h2>
+                            <p class="para">This is what I built as my first web application which is now dead.</p>
+                        </div>
+                    </a>
+                    
+                    <a href="/coding-greatness/articles/the-mission-now" class="link article column">
+                        <div class="img-content">
+                            <img src="{{ url_for('static', filename='assets/articles/the-mission-now.png') }}" alt="The mission of coderadi now" class="img">
+                        </div>
+
+                        <div class="text-content column gap-10">
+                            <h2 class="h2">The mission now</h2>
+                            <p class="para">Explore what we're currently planning to build and how it can change the world.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </section>
+
+        section.
     </main>
 
     {% include 'components/footer.html' %}

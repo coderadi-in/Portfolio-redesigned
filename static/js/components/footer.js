@@ -4,7 +4,7 @@ const footer = document.querySelector("footer");
 
 document.addEventListener('DOMContentLoaded', () => {
     // & GETTING FOOTER HEIGHT
-    const footerHeight = footer.offsetHeight;
+    const footerHeight = footer.clientHeight;
 
     // & ADDING MARGIN RELATIVE TO THE HEIGHT OF FOOTER
     main.style.marginBottom = `${footerHeight}px`;

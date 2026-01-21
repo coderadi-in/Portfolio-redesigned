@@ -1,8 +1,9 @@
 // ? GETTING DOC ELEMENTS
 const heroSection = document.querySelector('.hero');
+const articlesSection = document.querySelector('.articles');
 
 // & PREPARING OBSERVABLE SECTIONS ARRAY
-const observables = [heroSection];
+const observables = [heroSection, articlesSection];
 
 // ! INTERSECTION OBSERVER VALUES
 const observerOptions = {

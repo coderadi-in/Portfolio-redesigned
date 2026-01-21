@@ -10,3 +10,18 @@
     opacity: 1;
 }
 /* | HERO SECTION [END] */
+
+/* | ARTICLES SECTION [START] */
+.articles .article {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+.articles.visible .article {
+    transform: translateY(0);
+    opacity: 1;   
+}
+
+.articles .article:nth-child(1) {transition-delay: 0ms;}
+.articles .article:nth-child(2) {transition-delay: 100ms;}
+.articles .article:nth-child(3) {transition-delay: 200ms;}
