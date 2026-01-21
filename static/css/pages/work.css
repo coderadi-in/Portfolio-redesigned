@@ -1,46 +1,75 @@
+/* & CUSTOM IN-PAGE VALUES */
+@property --fill {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+}
+
 /* & ANIMATION VALUES */
 @keyframes flowVertical {
     0%, 100% {transform: translateY(0);}
     50% {transform: translateY(-15px);}
 }
 
-/* | HEADER SECTION */
+/* | HEADER */
 .header {
     position: fixed;
-    z-index: 10;
     width: 100%;
+    z-index: 10;
 }
 
 /* | HERO SECTION [START] */
 .hero {
     height: 100vh;
-    background-image: url('/static/assets/images/coding-greatness.png');
-    background-size: cover;
     text-align: center;
 }
 
+.hero .section {height: 100%;}
+
+.hero .h1 {font-size: min(4rem, 10vw);}
 .hero .symbol {
     position: absolute;
     bottom: 20px;
     animation: flowVertical 2s linear(0, 0.0002, 0.001, 0.0022, 0.0039, 0.0062, 0.0089, 0.012, 0.0157, 0.0199, 0.0245, 0.0296, 0.0351, 0.0411, 0.0476, 0.0545, 0.0618, 0.0696, 0.0778, 0.0865, 0.0955, 0.1049, 0.1147, 0.1249, 0.1355, 0.1464, 0.1577, 0.1693, 0.1813, 0.1935, 0.2061, 0.219, 0.2321, 0.2455, 0.2591, 0.273, 0.2871, 0.3014, 0.3159, 0.3306, 0.3455, 0.3605, 0.3757, 0.3909, 0.4063, 0.4218, 0.4373, 0.4529, 0.4686, 0.4843, 0.5, 0.5157, 0.5314, 0.5471, 0.5627, 0.5782, 0.5937, 0.6091, 0.6243, 0.6395, 0.6545, 0.6694, 0.6841, 0.6986, 0.7129, 0.727, 0.7409, 0.7545, 0.7679, 0.781, 0.7939, 0.8065, 0.8187, 0.8307, 0.8423, 0.8536, 0.8645, 0.8751, 0.8853, 0.8951, 0.9045, 0.9135, 0.9222, 0.9304, 0.9382, 0.9455, 0.9524, 0.9589, 0.9649, 0.9704, 0.9755, 0.9801, 0.9843, 0.988, 0.9911, 0.9938, 0.9961, 0.9978, 0.999, 0.9998, 1) infinite;
 }
-
-.hero .section {height: 100%;}
-.hero .h1 {font-size: 3rem;}
 /* | HERO SECTION [END] */
 
-/* | ARTICLES SECTION [START] */
-.articles .grid {grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));}
+/* | WHO SECTION [START] */
+.who {text-align: center;}
 
-.articles .article:hover .img {transform: scale(1.1);}
-
-.articles .article .img-content {overflow: hidden;}
-.articles .article .img {border-left: 2px solid var(--border);}
-
-.articles .article .text-content {
-    padding: 20px;
-    border-radius: 0 0 0 20px;
-    border-left: 2px solid var(--border);
-    border-bottom: 2px solid var(--border);
+.who .para {
+    max-width: 700px;
+    line-height: 25px;
 }
-/* | ARTICLES SECTION [END] */
+/* | WHO SECTION [END] */
+
+/* | OFFERS SECTION [START] */
+.offers .grid {grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));}
+
+.offers .offer .symbol {
+    background-color: var(--surface);
+    width: fit-content;
+    border-radius: 50px;
+    padding: 20px;
+    position: relative;
+}
+
+.offers .offer .symbol::after {
+    content: '';
+    position: absolute;
+    border-radius: inherit;
+    z-index: -1;
+    inset: -3px;
+
+    background: conic-gradient(
+        var(--primary) var(--fill),
+        transparent var(--fill)
+    );
+
+    transition: --fill 0.6s ease-in-out;
+}
+
+.offers .offer:hover .symbol {
+    color: var(--primary);
+    --fill: 100%;
+}

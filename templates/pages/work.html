@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="language" content="en">
+    <meta name="author" content="coderadi">
+    <meta name="theme-color" content="#1C69D4">
+    <meta name="robots" , content="index, follow">
+    <meta name="canonical" , content="https://coderadi.in">
+
+    <meta name="description"
+        content="Explore Projects. Build from our exclusive collections or collaborate with us to create a solution wholly unique to you.">
+    <meta name="keywords"
+        content="coderadi, coderadi.in, software developer, web developer, Aditya, Adi, coder aditya, coding greatness">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/icons/icon.ico') }}" type="image/x-icon">
+    <title>coderadi &bull; Coding The Greatness</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/work.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations/work.css') }}">
+</head>
+
+<body>
+    {% include 'components/header.html' %}
+
+    <main class="main column gap-100">
+        <section class="hero">
+            <section class="section column center gap-20">
+                <h1 class="h1">Let's build something memorable together</h1>
+                <h3 class="h3">Work with coderadi</h3>
+                <span class="symbol">keyboard_arrow_down</span>
+            </section>
+        </section>
+
+        <section class="who">
+            <section class="section column center gap-20">
+                <h1 class="h1">Who we are working with</h1>
+
+                <p class="para">We partner with founders, business owners, and operators who treat their digital
+                    presence as a growth asset — not a checkbox. Our work is best suited for teams that value clarity,
+                    speed, and outcomes, and who are ready to invest in systems that convert and are useful.</p>
+
+                <a href="/contact/?ref=work" class="link btn fl">Apply to work together</a>
+            </section>
+        </section>
+
+        <section class="offers">
+            <section class="section column gap-50">
+                <div class="head column v-center gap-20">
+                    <h1 class="h1">What we can work for</h1>
+                    <p class="para">Let's see if we provide what you're looking for</p>
+                </div>
+
+                <div class="body grid gap-40">
+                    <div class="offer column gap-10">
+                        <span class="symbol">code</span>
+                        <h2 class="h2">Business website</h2>
+
+                        <p class="para">A flagship digital presence crafted for credibility, clarity, and consistent business growth.</p>
+                    </div>
+                    
+                    <div class="offer column gap-10">
+                        <span class="symbol">article</span>
+                        <h2 class="h2">Landing page</h2>
+
+                        <p class="para">A single-goal experience built to persuade decisively and maximize conversions from every visitor.</p>
+                    </div>
+                    
+                    <div class="offer column gap-10">
+                        <span class="symbol">deployed_code</span>
+                        <h2 class="h2">Custom software</h2>
+
+                        <p class="para">Tailored systems built to solve real operational problems and support long-term scale.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    {% include 'components/footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/pages/work.js') }}"></script>
+</body>
+
+</html>

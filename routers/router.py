@@ -21,6 +21,11 @@ def coding_greatness():
 def projects():
     return render_template('pages/projects.html')
 
+# & WORK-WITH-US ROUTE
+@router.route('/work/')
+def work():
+    return render_template('pages/work.html')
+
 # & ABOUT ROUTE
 @router.route('/about/')
 def about():

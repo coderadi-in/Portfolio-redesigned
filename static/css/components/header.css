@@ -1,3 +1,5 @@
+.header {backdrop-filter: blur(10px);}
+
 .header .content {
     padding: 20px;
     max-width: 1696px;

@@ -1,0 +1,33 @@
+/* | HERO SECTION [START] */
+.hero .h1,
+.hero .h3 {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.hero.visible .h1,
+.hero.visible .h3 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.hero .h1 {transition-delay: 0ms;}
+.hero .h3 {transition-delay: 200ms;}
+/* | HERO SECTION [END] */
+
+/* | OFFERS SECTION [START] */
+.offers .offer {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.offers.visible .offer {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.offers .offer:nth-child(1) {transition-delay: 0ms;}
+.offers .offer:nth-child(2) {transition-delay: 200ms;}
+.offers .offer:nth-child(3) {transition-delay: 400ms;}
