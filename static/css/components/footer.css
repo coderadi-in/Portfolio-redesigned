@@ -1,10 +1,6 @@
 .footer {
     background-color: var(--surface);
     padding-top: 50px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: -1;
 }
 
 .footer .h2 {text-align: center;}
