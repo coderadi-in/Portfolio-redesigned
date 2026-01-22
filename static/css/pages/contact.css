@@ -20,14 +20,25 @@
 }
 /* | HERO SECTION [END] */
 
-/* | ABOUT-CONTENT SECTIONS [START] */
-.about-content {color: var(--text-secondary);}
-.about-content .t-normal {color: var(--text);}
-/* | ABOUT-CONTENT SECTIONS [END] */
+/* | QUESTION SECTION [START] */
+.question .form {
+    max-width: 700px;
+    width: 100%;
+}
+/* | QUESTION SECTION [END] */
+
+/* | DIVIDER */
+.divider {
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
 
 /* & RESPONSIVE VERSIONS */
+@media (max-width: 1024px) {
+    .divider {max-width: 500px;}
+}
+
 @media (max-width: 568px) {
-    .about-content.intro .section {
-        flex-direction: column;
-    }
+    .divider {max-width: 250px;}
 }

@@ -5,13 +5,6 @@
     initial-value: 0%;
 }
 
-/* | HEADER */
-.header {
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-}
-
 /* | HERO SECTION [START] */
 .hero {
     background-image: url('/static/assets/images/bg.png');

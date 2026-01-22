@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="language" content="en">
+    <meta name="author" content="coderadi">
+    <meta name="theme-color" content="#1C69D4">
+    <meta name="robots" , content="index, follow">
+    <meta name="canonical" , content="https://coderadi.in">
+
+    <meta name="description" content="Coding greatness. Explore how it all started and how it's going on right now.">
+    <meta name="keywords"
+        content="coderadi, coderadi.in, software developer, web developer, Aditya, Adi, coder aditya, coding greatness">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/icons/icon.ico') }}" type="image/x-icon">
+    <title>Coding The Greatness</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/contact.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations/contact.css') }}">
+</head>
+
+<body>
+    {% include 'components/header.html' %}
+
+    <main class="main column gap-100">
+        <section class="hero">
+            <section class="section center">
+                <h1 class="h1">Contact us</h1>
+                <span class="symbol">keyboard_arrow_down</span>
+            </section>
+        </section>
+
+        <section class="question">
+            <section class="section column v-center gap-50">
+                <div class="head">
+                    <h1 class="h1">Ask us a question</h1>
+                </div>
+
+                <form action="/contact/" method="post" class="form column gap-20">
+                    <div class="form-elem column gap-10">
+                        <label for="name">Name*</label>
+                        <input required type="text" name="name" id="name" class="input" placeholder="Your name">
+                    </div>
+
+                    <div class="form-elem column gap-10">
+                        <label for="email">Email*</label>
+                        <input required type="email" name="email" id="email" class="input" placeholder="Your email">
+                    </div>
+
+                    <div class="form-elem column gap-10">
+                        <label for="subject">Subject*</label>
+                        <input required type="text" name="subject" id="subject" class="input"
+                            placeholder="Briefly explain your query">
+                    </div>
+
+                    <div class="form-elem column gap-10">
+                        <label for="message">Enquiry</label>
+                        <textarea name="message" id="message" class="input"
+                            placeholder="Type your enquiry here"></textarea>
+                    </div>
+
+                    <button type="submit" class="link btn fl">Send request</button>
+                </form>
+            </section>
+        </section>
+
+        <hr class="divider">
+
+        <section class="work">
+            <section class="section column v-center head gap-20">
+                <h1 class="h1">Work with us</h1>
+
+                <p class="para">We partner with founders, business owners, and operators who treat their digital
+                    presence as a growth asset — not a checkbox. Our work is best suited for teams that value clarity,
+                    speed, and outcomes, and who are ready to invest in systems that convert and are useful.</p>
+
+                <a href="/contact/?ref=work" class="link btn fl">Apply to work together</a>
+            </section>
+        </section>
+    </main>
+
+    {% include 'components/footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/pages/contact.js') }}"></script>
+</body>
+
+</html>
