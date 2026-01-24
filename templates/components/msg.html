@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components/msg.css') }}">
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<ul class="alerts column gap-10">
+    {% for category, message in messages %}
+    <li class="alert {{ category }} row gap-10">
+        <span class="symbol">{{ category }}</span>
+        <span class="text">{{ message }}</span>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+<script src="{{ url_for('static', filename='js/components/msg.js') }}"></script>

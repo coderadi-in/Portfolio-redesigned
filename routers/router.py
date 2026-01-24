@@ -8,9 +8,14 @@ from plugins import *
 # ! INITIALIZING BASE ROUTER
 router = Blueprint('router', __name__)
 
+# * FUNCTION TO FLASH `UNDER-DEVELOPMENT` MESSAGE
+def flash_dev():
+    flash("This website is under development, some functions may not work.", "info")
+
 # & BASE ROUTE
 @router.route('/')
 def home():
+    flash_dev()
     return render_template('pages/home.html')
 
 # & CODING-THE-GREATNESS ROUTE
@@ -50,13 +55,13 @@ def contact():
         return render_template('pages/contact.html')
     
     else:
-        # | GETTING FORM DATA
+        # GETTING FORM DATA
         name = request.form.get('name')
         email = request.form.get('email')
         subject = request.form.get('subject')
         message = request.form.get('message')
 
-        # | SAVING ENQUIRY
+        # SAVING ENQUIRY
         new_enquiry = Enquiry(
             name=name,
             email=email,
@@ -66,7 +71,7 @@ def contact():
         db.session.add(new_enquiry)
         db.session.commit()
 
-        # | NOTIFYING THE ADMIN
+        # NOTIFYING THE ADMIN
         notify(
             f"""Hey, you've received a new enquiry on coderadi.in!
 Name: {name}
@@ -75,3 +80,12 @@ Subject: {subject}
 Message: {message}
 """
         )
+
+        # GETTING THE PREVIOUS URL TO RETURN THE USER TO
+        from_url = request.referrer
+        if (not from_url):
+            from_url = request.url
+
+        # RETURNING RESPONSE TO USER
+        flash("Your enquiry is submitted, we'll reply within 24 hours.", "check_circle")
+        return redirect(from_url)
