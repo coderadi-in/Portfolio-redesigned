@@ -36,3 +36,20 @@ class Enquiry(db.Model):
     email = db.Column(db.String(50), nullable=False)
     subject = db.Column(db.String(50), nullable=False)
     message = db.Column(db.TEXT)
+
+# | ERROR-REPORT DATABASE MODEL
+class ErrorReport(db.Model):
+    '''Saves the report of error in the site.
+    
+    ## Params
+    - id: Integer, `primary`
+    - error_type: String
+    - page_url: String
+    - email: String
+    - message: TEXT'''
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    error_type = db.Column(db.String(70))
+    page_url = db.Column(db.String(70))
+    email = db.Column(db.String(50))
+    message = db.Column(db.TEXT)

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>404 &bull; Lost in Code</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/icons/icon.ioc') }}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/err.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations/err.css') }}">
+</head>
+<body>
+    {% include 'components/header.html' %}
+    {% include 'components/msg.html' %}
+
+    <main class="main column gap-100">
+        <section class="hero">
+            <section class="section column center gap-20">
+                <h1 class="h1">Lost in Code</h1>
+                <h3 class="h3">The page you're looking for is probably removed or never existed.</h3>
+                <a href="/" class="link btn fl">Back to Home page</a>
+
+                <span class="symbol">keyboard_arrow_down</span>
+            </section>
+        </section>
+
+        <section class="report">
+            <section class="section column gap-50">
+                <div class="head column v-center gap-10">
+                    <h1 class="h1">Report an error</h1>
+                    <p class="para">You can report that this page is missing on this site.</p>
+                </div>
+
+                <form action="/report/" method="post" class="form column gap-20">
+                    <div class="form-elem column gap-10">
+                        <label for="error-type">Error Type</label>
+                        <input type="text" name="error-type" id="error-type" class="input" value="404" readonly>
+                    </div>
+
+                    <div class="form-elem column gap-10">
+                        <label for="page-url">Page URL</label>
+                        <input type="text" name="page-url" id="page-url" class="input" value="{{ data.page_url }}" readonly>
+                    </div>
+
+                    <div class="form-elem column gap-10">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="input" placeholder="Your email (optional)">
+                    </div>
+
+                    <div class="form-elem column gap-10">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" class="input" placeholder="Type any message if you want to give us..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Report error</button>
+                </form>
+            </section>
+        </section>
+    </main>
+
+    {% include 'components/footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/base/err.js') }}"></script>
+</body>
+</html>

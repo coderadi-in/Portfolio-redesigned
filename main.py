@@ -1,7 +1,7 @@
 '''coderadi &bull; Main file of the project'''
 
 # ? IMPORTING LIBRARIES
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from plugins import *
 from routers import *
 import os
@@ -28,7 +28,10 @@ with server.app_context():
 # & 404
 @server.errorhandler(404)
 def handle_404(error):
-    return render_template('err/404.html')
+    page_url = request.url
+    return render_template('err/404.html', data={
+        'page_url': page_url
+    })
 
 # & 500
 @server.errorhandler(500)

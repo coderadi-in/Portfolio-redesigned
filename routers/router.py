@@ -2,7 +2,7 @@
 
 # ? IMPORTING LIBRARIES
 from flask import Blueprint, render_template, redirect, url_for, flash, request
-from plugins.models import Enquiry
+from plugins.models import Enquiry, ErrorReport
 from plugins import *
 
 # ! INITIALIZING BASE ROUTER
@@ -89,3 +89,31 @@ Message: {message}
         # RETURNING RESPONSE TO USER
         flash("Your enquiry is submitted, we'll reply within 24 hours.", "check_circle")
         return redirect(from_url)
+    
+# & REPORT PAGE (ERROR REPORTING)
+@router.route('/report/', methods=['POST'])
+def report_error():
+    # GETTING FORM DATA
+    error_type = request.files.get('error-type')
+    page_url = request.form.get('page-url')
+    email = request.form.get('email')
+    message = request.form.get('message')
+
+    # CREATING NEW DB ROW
+    new_error = ErrorReport(
+        error_type=error_type,
+        page_url=page_url,
+        email=email,
+        message=message
+    )
+
+    # SAVING ROW IN DB
+    db.session.add(new_error)
+    db.session.commit()
+
+    # NOTIFYING THE ADMIN
+    notify("Hey, you've received a new error report on coderadi.in!")
+
+    # RETURNING RESPONSE TO USER
+    flash("Your report has been submitted. We'll fix that as soon as possible.", "check_circle")
+    return redirect(url_for('router.home'))

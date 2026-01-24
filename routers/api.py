@@ -152,4 +152,46 @@ def delete_enquiry(enquiry_id):
 
     return {'status': 'success', 'message': 'Enquiry deleted successfully.'}, 200
 # >>> II ENQUIRIES OPERATIONS [END]
-# >>> i DB OPERATIONS [END]
+
+# >>> II ERROR OPERATIONS [START]
+# & API ROUTE TO GET ALL ERROR REPORTS
+@api.route('/db/errors-report/all', methods=['GET'])
+def get_all_reports():
+    # | CHECKING ADMIN PASS
+    check_admin_pass()
+
+    # | FETCHING ERRORS
+    errors = ErrorReport.query.all()
+    errors_list = []
+
+    # | FORMATTING ERRORS
+    for error in errors:
+        errors_list.append({
+            'id': error.id,
+            'type': error.error_type,
+            'page-url': error.page_url,
+            'email': error.email,
+            'message': error.message,
+        })
+
+    return {'status': 'success', 'errors': errors_list}, 200
+
+# & API ROUTE TO DELETE AN ERROR REPORT
+@api.route('/db/errors-report/delete/<int:report_id>', methods=['DELETE'])
+def delete_report(report_id):
+    # | CHECKING ADMIN PASS
+    check_admin_pass()
+
+    # | FETCHING ERROR REPORT
+    report = ErrorReport.query.get(report_id)
+
+    if (not report_id):
+        return {'status': 'error', 'message': 'Report not found.'}, 404
+
+    # | DELETING REPORT
+    db.session.delete(report)
+    db.session.commit()
+
+    return {'status': 'success', 'message': 'Report deleted successfully.'}, 200
+# >>> II ERROR OPERATIONS [END]
+# >>> I DB OPERATIONS [END]
