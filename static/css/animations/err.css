@@ -31,5 +31,6 @@
 .report .form-elem:nth-child(1) {transition-delay: 0ms;}
 .report .form-elem:nth-child(2) {transition-delay: 100ms;}
 .report .form-elem:nth-child(3) {transition-delay: 200ms;}
-.report .btn {transition-delay: 300ms;}
+.report .form-elem:nth-child(4) {transition-delay: 300ms;}
+.report .btn {transition-delay: 400ms;}
 /* | REPORT SECTION [END] */

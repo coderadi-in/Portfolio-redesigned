@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="language" content="en">
+    <meta name="author" content="coderadi">
+    <meta name="theme-color" content="#1C69D4">
+    <meta name="robots" , content="index, follow">
+    <meta name="canonical" , content="https://coderadi.in">
+
+    <meta name="description" content="Explore a brief journey about how Adi became coderadi.">
+    <meta name="keywords"
+        content="coderadi, coderadi.in, software developer, web developer, Aditya, Adi, coder aditya, coding greatness">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/icons/icon.ico') }}" type="image/x-icon">
+    <title>How adi became coderadi</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/articles/how-adi-became-coderadi.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations/how-adi-became-coderadi.css') }}">
+</head>
+
+<body>
+    {% include 'components/header.html' %}
+    {% include 'components/msg.html' %}
+
+    <main class="main column gap-100">
+        <section class="hero">
+            <section class="section column center">
+                <h1 class="h1">How adi became coderadi</h1>
+
+                <span class="symbol">keyboard_arrow_down</span>
+            </section>
+        </section>
+
+        <section class="stage stage1">
+            <section class="section flex gap-50">
+                <div class="left">
+                    <h1 class="h1">Taking the first step towards coding</h1>
+                </div>
+
+                <div class="right column gap-20">
+                    <p class="para"><span class="t-normal">In year 2023, at the age of 15</span>, Aditya took his first
+                        step towards coding.</p>
+
+                    <p class="para">One day he was scrolling social media, just like another Gen-Z guy. But a single
+                        reel flickered across his screen, <i>"I'm taking challenge to learn coding in one day."</i>.</p>
+
+                    <p class="para">That evening, he searched for how to start coding, thinking to <span
+                            class="t-normal">try it out for just a week.</span></p>
+
+                    <p class="para">But that single week of curiosity changed his entire life and how he was supposed to
+                        be.</p>
+
+                    <p class="para">He learnt some topic, ran some code, it was really for him. It was so much fun that
+                        he didn't realized that <span class="t-normal">the week was now more than two years</span>.</p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    {% include 'components/footer.html' %}
+
+    <script src="{{ url_for('static', filename='js/articles/how-adi-became-coderadi.js') }}"></script>
+</body>
+
+</html>

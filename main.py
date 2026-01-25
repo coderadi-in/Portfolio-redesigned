@@ -36,4 +36,7 @@ def handle_404(error):
 # & 500
 @server.errorhandler(500)
 def handle_404(error):
-    return render_template('err/500.html')
+    page_url = request.url
+    return render_template('err/500.html', data={
+        'page_url': page_url
+    })
