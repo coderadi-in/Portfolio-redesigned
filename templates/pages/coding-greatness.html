@@ -83,7 +83,8 @@
 
     {% include 'components/footer.html' %}
 
-    <script src="{{ url_for('static', filename='js/pages/coding-greatness.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/base/observer.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/pages/coding-greatness.js') }}"></script>
 </body>
 
 </html>

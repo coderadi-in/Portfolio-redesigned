@@ -86,7 +86,8 @@
 
     {% include 'components/footer.html' %}
 
-    <script src="{{ url_for('static', filename='js/pages/contact.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/base/observer.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/pages/contact.js') }}"></script>
 </body>
 
 </html>

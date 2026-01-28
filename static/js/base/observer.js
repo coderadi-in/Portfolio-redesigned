@@ -1,10 +1,3 @@
-// ? GETTING DOC ELEMENTS
-const heroSection = document.querySelector('.hero');
-const reportSection = document.querySelector('.report');
-
-// & PREPARING OBSERVABLE SECTIONS ARRAY
-const observables = [heroSection, reportSection];
-
 // ! INTERSECTION OBSERVER VALUES
 const observerOptions = {
     root: null, // Use viewport as root
@@ -13,7 +6,7 @@ const observerOptions = {
 };
 
 // ! INITIALIZING INTERSECTION OBSERVER
-const observer = new IntersectionObserver((entries) => {
+export const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
@@ -23,8 +16,3 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, observerOptions);
-
-// & OBSERVING DOC SECTION ELEMENTS
-observables.forEach(element => {
-    observer.observe(element);
-});
