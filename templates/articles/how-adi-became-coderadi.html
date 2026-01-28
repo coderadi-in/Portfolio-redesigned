@@ -39,7 +39,7 @@
         <section class="stage stage1">
             <section class="section flex gap-50">
                 <div class="left">
-                    <h1 class="h1">Taking the first step towards coding</h1>
+                    <h1 class="h1">Taking the first step towards <span class="t-normal">coding</span></h1>
                 </div>
 
                 <div class="right column gap-20">
@@ -55,8 +55,116 @@
                     <p class="para">But that single week of curiosity changed his entire life and how he was supposed to
                         be.</p>
 
-                    <p class="para">He learnt some topic, ran some code, it was really fun for him. It was so much fun that
+                    <p class="para">He learnt some topic, ran some code, it was really fun for him. It was so much fun
+                        that
                         he didn't realized that <span class="t-normal">the week was now more than two years</span>.</p>
+                </div>
+            </section>
+        </section>
+
+        <section class="stage stage2">
+            <section class="section row gap-50">
+                <div class="left column gap-20">
+                    <h1 class="h1">The Crucible of Knowledge <span class="t-normal">Sharing</span></h1>
+
+                    <p class="para">The solitary coder stepped onto the digital stage. The mission was clear:
+                        democratize the craft, make the daunting accessible, and <span class="t-normal">transform
+                            complexity into captivating
+                            clarity</span>.</p>
+
+                    <p class="para">Enter <a href="https://www.instagram.com/py.cod3" class="link"
+                            target="_blank">@py.cod3</a>—a portal
+                        to the world of Python. This wasn't just an Instagram page;
+                        it was a dynamic academy, a theater of code.</p>
+
+                    <p class="para">Here, through a cascade of Reels, abstract concepts learned in silence were reborn
+                        as public spectacle. Bugs met their comedic demise.</p>
+
+                    <p class="para">Lines of code resolved into elegant solutions, all in 90 seconds or less. Each video
+                        was a meticulously crafted spark, designed to <span class="t-normal">ignite curiosity in a
+                            thousand different minds</span>.</p>
+
+                    <p class="para">The forger had become a show-runner, and the audience was hungry for more.</p>
+                </div>
+
+                <div class="right">
+                    <img src="{{ url_for('static', filename='assets/articles/pycod3-instagram.png') }}"
+                        alt="Picture of Instagram page of @pycod3" class="img">
+                </div>
+            </section>
+        </section>
+
+        <section class="stage stage3">
+            <section class="section row gap-50">
+                <div class="left">
+                    <img src="{{ url_for('static', filename='assets/articles/coderadi-def.png') }}"
+                        alt="Defining the name, coderadi" class="img">
+                </div>
+
+                <div class="right column gap-20">
+                    <h1 class="h1">The personal signature</h1>
+
+                    <p class="para">Yet, for all its reach, a broadcast can feel distant. The stage name, a mask. There
+                        was a whisper for something more intimate, a connection that resonated with the heartbeat behind
+                        the code.</p>
+
+                    <p class="para">The digital persona craved a soul.</p>
+
+                    <p class="para">And so, the evolution crystallized. From the ethos of <a
+                            href="https://www.instagram.com/py.cod3" class="link" target="_blank">@py.cod3</a> rose <a
+                            href="https://www.instagram.com/coderadi.in" class="link" target="_blank">@coderadi.in</a>.
+                        This was more
+                        than a new handle; it was a manifesto, an identity forged in a single, elegant phrase.</p>
+
+                    <p class="para">coderadi.in. It felt personal. It looked unique. It was no longer just about sharing
+                        knowledge; it was about <span class="t-normal">sharing a journey</span>.</p>
+
+                    <p class="para">This was the premium touch—the shift from a brilliant instructor to a relatable
+                        protagonist.</p>
+
+                    <p class="para">The page became a curated chronicle, a blend of professional insight and personal
+                        narrative, where the lessons of code intertwined with the lessons of the journey itself.</p>
+
+                    <p class="para">The transformation was complete. Adi, the coder, had fully become coderadi—a brand,
+                        a beacon, and most importantly, a person you felt <span class="t-normal">you could code
+                            alongside</span>.</p>
+
+                    <p class="para">The screen's glow was no longer solitary. It was a campfire, and around it, a
+                        community gathered, learning not just from a teacher, but from a <span class="t-normal">fellow
+                            traveler who had mapped the path</span> and left the coordinates for all to find.</p>
+                </div>
+            </section>
+        </section>
+
+        <section class="more">
+            <section class="section column gap-50 v-center">
+                <h1 class="h1">Read more</h1>
+
+                <div class="body grid gap-20">
+                    <a href="/coding-greatness/articles/the-first-app-built" class="link article column">
+                        <div class="img-content">
+                            <img src="{{ url_for('static', filename='assets/previews/the-first-app-built.png') }}"
+                                alt="The first app built by coderadi" class="img">
+                        </div>
+
+                        <div class="text-content column gap-10">
+                            <h2 class="h2">The first application we built</h2>
+                            <p class="para">This is what I built as my first web application which is now dead.</p>
+                        </div>
+                    </a>
+
+                    <a href="/coding-greatness/articles/the-mission-now" class="link article column">
+                        <div class="img-content">
+                            <img src="{{ url_for('static', filename='assets/previews/the-mission-now.png') }}"
+                                alt="The mission of coderadi now" class="img">
+                        </div>
+
+                        <div class="text-content column gap-10">
+                            <h2 class="h2">The mission now</h2>
+                            <p class="para">Explore what we're currently planning to build and how it can change the
+                                world.</p>
+                        </div>
+                    </a>
                 </div>
             </section>
         </section>
@@ -64,7 +172,8 @@
 
     {% include 'components/footer.html' %}
 
-    <script src="{{ url_for('static', filename='js/articles/how-adi-became-coderadi.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/base/observer.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/articles/how-adi-became-coderadi.js') }}"></script>
 </body>
 
 </html>

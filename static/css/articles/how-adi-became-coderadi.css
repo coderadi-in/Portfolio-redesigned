@@ -7,6 +7,7 @@
 /* & CUSTOM IN-PAGE STYLES */
 .stage {color: var(--text-secondary);}
 .t-normal {color: var(--text);}
+.h1 .t-normal {font-family: "Roboto Condensed", sans-serif;}
 
 /* | HERO SECTION [START] */
 .hero {
@@ -24,3 +25,31 @@
 .hero .section {height: 100%;}
 .hero .h1 {font-size: min(4rem, 10vw);}
 /* | HERO SECTION [END] */
+
+/* | MORE SECTION [START] */
+.more .h1 {text-align: center;}
+
+.more .grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 1000px;
+}
+
+.more .article:hover .img {transform: scale(1.1);}
+
+.more .article .img-content {overflow: hidden;}
+.more .article .img {border-left: 2px solid var(--border);}
+
+.more .article .text-content {
+    padding: 20px;
+    border-radius: 0 0 0 20px;
+    border-left: 2px solid var(--border);
+    border-bottom: 2px solid var(--border);
+}
+/* | MORE SECTION [END] */
+
+/* & RESPONSIVE VERSIONS */
+@media (max-width: 1024px) {
+    .stage .section {flex-direction: column;}
+    .stage.stage3 .section {flex-direction: column-reverse;}
+    .more .grid {max-width: 100%;}
+}

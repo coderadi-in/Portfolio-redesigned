@@ -1,8 +1,8 @@
 // ! INTERSECTION OBSERVER VALUES
 const observerOptions = {
-    root: null, // Use viewport as root
-    rootMargin: '0px', // No margin around root
-    threshold: 0.4 // 40% visibility threshold
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.3
 };
 
 // ! INITIALIZING INTERSECTION OBSERVER

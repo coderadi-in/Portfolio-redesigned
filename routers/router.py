@@ -2,7 +2,7 @@
 
 # ? IMPORTING LIBRARIES
 from flask import Blueprint, render_template, redirect, url_for, flash, request
-from plugins.models import Enquiry, ErrorReport
+from plugins.models import Enquiry, ErrorReport, Project
 from plugins import *
 
 # ! INITIALIZING BASE ROUTER
@@ -31,7 +31,10 @@ def show_article(article):
 # & PROJECTS ROUTE
 @router.route('/projects/')
 def projects():
-    return render_template('pages/projects.html')
+    projects_ = Project.query.all()
+    return render_template('pages/projects.html', data={
+        'projects': projects_
+    })
 
 # | PROJECT-DOC ROUTE
 @router.route('/projects/<project>')
