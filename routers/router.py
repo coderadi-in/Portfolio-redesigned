@@ -1,7 +1,7 @@
 '''coderadi &bull; Base router for the site'''
 
 # ? IMPORTING LIBRARIES
-from flask import Blueprint, render_template, redirect, url_for, flash, request
+from flask import Blueprint, render_template, redirect, url_for, flash, request, send_file
 from plugins.models import Enquiry, ErrorReport, Project
 from plugins import *
 
@@ -120,3 +120,8 @@ def report_error():
     # RETURNING RESPONSE TO USER
     flash("Your report has been submitted. We'll fix that as soon as possible.", "check_circle")
     return redirect(url_for('router.home'))
+
+# & SITEMAP
+@router.route('/sitemap.xml')
+def send_sitemap():
+    return send_file('sitemap.xml')
