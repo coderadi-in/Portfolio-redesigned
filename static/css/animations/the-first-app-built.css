@@ -1,0 +1,41 @@
+/* | HERO SECTION [START] */
+.hero .h1 {
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.hero.visible .h1 {
+    transform: translateY(0);
+    opacity: 1;
+}
+/* | HERO SECTION [END] */
+
+/* | CONTENT SECTIONS [START] */
+.stage * {
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.stage.visible * {
+    transform: translateY(0);
+    opacity: 1;
+}
+/* | CONTENT SECTIONS [END] */
+
+/* | MORE SECTION [START] */
+.more .article {
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.more.visible .article {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.more .article:nth-child(1) {transition-delay: 0ms;}
+.more .article:nth-child(2) {transition-delay: 100ms;}
+/* | MORE SECTION [END] */

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="language" content="en">
+    <meta name="author" content="coderadi">
+    <meta name="theme-color" content="#1C69D4">
+    <meta name="robots" , content="index, follow">
+    <meta name="canonical" , content="https://coderadi.in">
+
+    <meta name="description" content="Explore the first app built by Aditya at the age of 17.">
+    <meta name="keywords"
+        content="coderadi, coderadi.in, software developer, web developer, Aditya, Adi, coder aditya, coding greatness">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/icons/icon.ico') }}" type="image/x-icon">
+    <title>The first app we built</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/articles/the-first-app-built.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations/the-first-app-built.css') }}">
+</head>
+
+<body>
+    {% include 'components/header.html' %}
+    {% include 'components/msg.html' %}
+
+    <main class="main column gap-100">
+        <section class="hero">
+            <section class="section column center">
+                <h1 class="h1">The first app we built</h1>
+                <span class="symbol">keyboard_arrow_down</span>
+            </section>
+        </section>
+
+        <section class="stage stage1">
+            <section class="section column gap-20">
+                <p class="para">Every empire <span class="t-normal">begins</span> with a single, trembling stone. Every
+                    legendary coder's story holds a relic—a first, crude, glorious proof of concept.</p>
+
+                <p class="para">This is ours. Before the polished reels, before the brand, there was a silent, dogged
+                    <span class="t-normal">obsession</span> in a <span class="t-normal">17-year-old's</span> bedroom.
+                </p>
+
+                <p class="para">The mission: to solve a real problem. The artifact: <span class="t-normal">The
+                        Attendance Manager</span>.</p>
+            </section>
+        </section>
+
+        <section class="stage stage2">
+            <section class="section flex gap-50">
+                <div class="left">
+                    <h1 class="h1">CHapter I: The Architect's First <span class="t-normal">Blueprint</span></h1>
+                </div>
+
+                <div class="right column gap-20">
+                    <p class="para">The vision was deceptively simple: bring order to chaos. Replace crumpled paper
+                        sheets and fading memory with digital certainty.</p>
+
+                    <p class="para">He named it with the straightforward pride of a first invention—<span
+                            class="t-normal">Attendance Manager</span>. No fluff. All function.</p>
+
+                    <p class="para">Its heartbeat was the sacred cycle of creation: CRUD.</p>
+
+                    <p class="para">The power to <span class="t-normal">Create</span> a new attendee, breathing digital
+                        life into a name.</p>
+
+                    <p class="para">To <span class="t-normal">View</span> the assembled roster, a general surveying his
+                        troops.</p>
+
+                    <p class="para">To <span class="t-normal">Edit</span>, because errors are human, but correction is
+                        divine.</p>
+
+                    <p class="para">And, with the sober weight of a judge, to <span class="t-normal">Delete</span>.</p>
+
+                    <p class="para">This was our foundational mantra, the first real spell he learned to cast.</p>
+                </div>
+            </section>
+        </section>
+
+        <section class="stage stage3">
+            <section class="section row gap-50">
+                <div class="left column gap-20">
+                    <h1 class="h1">Chapter II: The Ritual of the Mark</h1>
+
+                    <p class="para">But data entry is a tomb. The magic was in the ritual—the <span
+                            class="t-normal">Mark</span>.</p>
+
+                    <p class="para">A single click that transformed a "Present" from an abstract into a timestamped
+                        fact. It felt powerful.</p>
+
+                    <p class="para">It was a gesture that said, “You were here. I witness it.”</p>
+
+                    <p class="para">This click was the moment the app stopped being a <span
+                            class="t-normal">database</span> and started being a <span class="t-normal">tool</span>.</p>
+                </div>
+
+                <div class="right">
+                    <img src="{{ url_for('static', filename='assets/articles/attendance-mark.png') }}"
+                        alt="Attendance visualization window of the app" class="img">
+                </div>
+            </section>
+        </section>
+
+        <section class="stage stage4">
+            <section class="section flex gap-50">
+                <div class="left column gap-20">
+                    <p class="para">Data in a list is a story untold. We yearned to see the story.</p>
+
+                    <p class="para">So, he built a lens—a way to <span class="t-normal">visualize attendance</span>
+                        across days, weeks, and months in a clean, tabular format.</p>
+
+                    <p class="para">Patterns emerged like constellations. Streaks of presence, enigmatic absences.</p>
+
+                    <p class="para">The raw data transformed into a narrative of commitment and habit.</p>
+
+                    <p class="para">This was our first taste of alchemy—turning leaden information into golden insight.
+                    </p>
+                </div>
+
+                <div class="right">
+                    <h1 class="h1">Chapter III: The Crystal Ball: Visualization</h1>
+                </div>
+            </section>
+        </section>
+
+        <section class="stage stage5">
+            <section class="section row gap-50">
+                <div class="left">
+                    <img src="{{ url_for('static', filename='assets/articles/attendance-help.png') }}"
+                        alt="Support window of the app." class="img">
+                </div>
+
+                <div class="right column gap-20">
+                    <h1 class="h1">Chapter IV: The Lifeline - Help & <span class="t-normal">Support</span></h1>
+
+                    <p class="para">Even in our nascent creation, we understood that all systems must account for the
+                        user lost in the fog.</p>
+
+                    <p class="para">He built a Help & <span class="t-normal">Support system</span>. A humble, static
+                        page, perhaps—but it was a vow</p>
+
+                    <p class="para">A promise that the tool would not abandon its user.</p>
+
+                    <p class="para">It was the first acknowledgment of a responsibility that extended beyond our own
+                        keyboard.</p>
+                </div>
+            </section>
+        </section>
+
+        <section class="stage stage6">
+            <section class="section column gap-20">
+                <p class="para">Today, that app is <span class="t-normal">silent</span>. Its servers sleep. Its
+                    interface exists only in old screenshots and the precise architecture of memory. It is, by all
+                    standard definitions, a <span class="t-normal">dead</span> project.</p>
+
+                <p class="para">But in the catacombs of our development history, where old projects go to rest, this one
+                    does not gather dust. It hums with a low, persistent frequency. A ghost in the machine.</p>
+
+                <p class="para"><span class="t-normal">Because Aditya was about 17 when he built it.</span></p>
+
+                <p class="para">That fact transforms it from a dead app into a <span class="t-normal">monument</span>.
+                    It is the first castle built in the sand, proving the tide could be held back.</p>
+
+                <p class="para">Every line of code was a question answered, a fear conquered. Its very existence is the
+                    reason <a href="https://www.instagram.com/py.cod3" class="ulink" target="_blank">@py.cod3</a> and <a
+                        href="https://www.instagram.com/coderadi.in" class="ulink" target="_blank">@coderadi.in</a> could
+                    later be born—to share the hard-won lessons from battles like these.</p>
+
+                <p class="para">So, is it dead? Or is it merely dormant? A prototype <span class="t-normal">preserved in
+                        the digital</span> amber of a GitHub repository, waiting.</p>
+
+                <p class="para">Waiting for the day its core idea—that simple, powerful need for order—calls out again.
+                </p>
+
+                <p class="para">Waiting for the skills honed over years to return, not to revive it, but to reforge it.
+                </p>
+
+                <p class="para">The first forge is always the most sacred. And you never truly forget the heat of its
+                    fire.</p>
+
+                <p class="para">Here's the GitHub repository of the dead app. <a
+                        href="https://github.com/coderadi-in/attendance" class="ulink">CODERADI-ATTENDANCE</a></p>
+            </section>
+        </section>
+    </main>
+
+    {% include 'components/footer.html' %}
+
+    <script type="module" src="{{ url_for('static', filename='js/base/observer.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/articles/the-first-app-built.js') }}"></script>
+</body>
+
+</html>
