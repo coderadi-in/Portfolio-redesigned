@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="language" content="en">
+    <meta name="author" content="coderadi">
+    <meta name="theme-color" content="#1C69D4">
+    <meta name="robots" , content="index, follow">
+    <meta name="canonical" , content="https://coderadi.in">
+
+    <meta name="description" content="Build a custom business website for your business to operate online.">
+    <meta name="keywords"
+        content="coderadi, coderadi.in, software developer, web developer, Aditya, Adi, coder aditya, coding greatness">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/icons/icon.ico') }}" type="image/x-icon">
+    <title>Business website</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services/business-website.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations/business-website.css') }}">
+</head>
+
+<body>
+    {% include 'components/header.html' %}
+    {% include 'components/msg.html' %}
+
+    <main class="main column gap-100">
+        <section class="hero">
+            <section class="section column center">
+                <h1 class="h1">Business website</h1>
+                <span class="symbol">keyboard_arrow_down</span>
+            </section>
+        </section>
+
+        <section class="overview">
+            <section class="section column gap-20">
+                <p class="para">A business website is its online home. It shows what the company does and sells. People can visit to learn, contact the business, and buy things. It's open every day, all day.</p>
+            </section>
+        </section>
+
+        <section class="look">
+            <section class="section column gap-50">
+                <div class="head column v-center gap-10">
+                    <h1 class="h1">How a business site look like</h1>
+                    <p class="para">Here're some major sections a business site must have</p>
+                </div>
+
+                <div class="body grid gap-40">
+                    <div class="symptom column gap-10">
+                        <div class="symbol">support_agent</div>
+                        <h3 class="h3">Clear contact info</h3>
+                        <p class="para">How customers can easily reach you.</p>
+                    </div>
+                    
+                    <div class="symptom column gap-10">
+                        <div class="symbol">tooltip_2</div>
+                        <h3 class="h3">Explain what you do</h3>
+                        <p class="para">A simple description of your services or products.</p>
+                    </div>
+                    
+                    <div class="symptom column gap-10">
+                        <div class="symbol">call_to_action</div>
+                        <h3 class="h3">Strong calls to action</h3>
+                        <p class="para">Buttons like "Buy Now" or "Contact Us."</p>
+                    </div>
+                    
+                    <div class="symptom column gap-10">
+                        <div class="symbol">mobile_layout</div>
+                        <h3 class="h3">Mobile-friendly design</h3>
+                        <p class="para">Works well and looks good on phones.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    {% include 'components/footer.html' %}
+    
+    <script type="module" src="{{ url_for('static', filename='js/base/observer.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/services/business-website.js') }}"></script>
+</body>
+
+</html>

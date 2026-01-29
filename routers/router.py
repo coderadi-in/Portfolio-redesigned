@@ -46,6 +46,11 @@ def show_project(project):
 def work():
     return render_template('pages/work.html')
 
+# | WORK-SERVICE ROUTE
+@router.route('/work/<service>')
+def show_service(service):
+    return render_template(f'services/{service}.html')
+
 # & ABOUT ROUTE
 @router.route('/about/')
 def about():

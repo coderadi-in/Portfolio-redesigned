@@ -1,0 +1,46 @@
+/* | HERO SECTION [START] */
+.hero * {
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.hero.visible * {
+    transform: translateY(0);
+    opacity: 1;
+}
+/* | HERO SECTION [END] */
+
+/* | OVERVIEW SECTION [START] */
+.overview * {
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.overview.visible * {
+    transform: translateY(0);
+    opacity: 1;
+}
+/* | OVERVIEW SECTION [END] */
+
+/* | LOOK SECTION [START] */
+.look * {
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+}
+
+.look.visible * {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.look .head .h1 {transition-delay: 0ms;}
+.look .head .para {transition-delay: 100ms;}
+
+.look .symptom:nth-child(1) {transition-delay: 200ms;}
+.look .symptom:nth-child(2) {transition-delay: 300ms;}
+.look .symptom:nth-child(3) {transition-delay: 400ms;}
+.look .symptom:nth-child(4) {transition-delay: 500ms;}
+/* | LOOK SECTION [END] */
