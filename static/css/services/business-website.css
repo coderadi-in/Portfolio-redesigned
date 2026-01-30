@@ -45,18 +45,19 @@
 
 .look .symptom .symbol {
     background-color: var(--surface);
+    color: var(--primary);
     width: fit-content;
+    position: relative;
     padding: 20px;
     border-radius: 50px;
-    position: relative;
 }
 
 .look .symptom .symbol::after {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
     border-radius: inherit;
-    inset: -3px;
+    inset: 0;
     transition: --fill 600ms ease-in-out;
 
     background: conic-gradient(
@@ -66,6 +67,27 @@
 }
 
 .look .symptom:hover .symbol {
-    /* color: var(--primary); */
+    color: var(--text);
     --fill: 100%
+}
+/* | LOOK SECTION [END] */
+
+/* | BUILD SECTION [START] */
+.build .input-data {
+    border: 1px solid var(--border);
+    padding: 10px 15px;
+    border-radius: 8px;
+    position: relative;
+    align-self: stretch;
+}
+
+.build .input-data:has(.input:checked) {
+    background-color: var(--primary);
+}
+
+.build .input-data .input {
+    position: absolute;
+    inset: 0px;
+    cursor: pointer;
+    opacity: 0;
 }
