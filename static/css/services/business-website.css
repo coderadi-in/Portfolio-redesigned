@@ -72,22 +72,49 @@
 }
 /* | LOOK SECTION [END] */
 
-/* | BUILD SECTION [START] */
-.build .input-data {
-    border: 1px solid var(--border);
-    padding: 10px 15px;
+/* | BUILD & CONFIG SECTION [START] */
+.build-config .config-group {
+    background-color: var(--surface);
+    padding: 10px;
+}
+
+.build-config .selection-group {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.build-config .selection {
+    padding: 10px;
     border-radius: 8px;
+    border: 2px solid var(--border);
     position: relative;
-    align-self: stretch;
 }
 
-.build .input-data:has(.input:checked) {
-    background-color: var(--primary);
-}
-
-.build .input-data .input {
+.build-config .selection .input {
     position: absolute;
-    inset: 0px;
     cursor: pointer;
+    inset: 0;
     opacity: 0;
+}
+
+.build-config .selection .illustration {
+    padding: 10px;
+    background-color: var(--surface);
+    border-radius: 50px;
+}
+
+.build-config .selection .status {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: var(--primary);
+    opacity: 0;
+}
+
+.build-config .selection:has(.input:checked) {
+    background-color: var(--board-2);
+    border-color: var(--primary);
+}
+
+.build-config .selection:has(.input:checked) .status {
+    opacity: 1;
 }
