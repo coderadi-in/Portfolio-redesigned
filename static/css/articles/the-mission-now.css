@@ -26,17 +26,17 @@
 .hero .h1 {font-size: min(4rem, 10vw);}
 /* | HERO SECTION [END] */
 
-/* | STAGES SECTION [START] */
-.stage .section.row .left,
-.stage .section.row .right {width: 50%;}
-/* | STAGES SECTION [END] */
-
-/* | STAGE1 SECTION [START] */
-.stage1 {
-    text-align: center;
+/* | OVERVIEW SECTION [START] */
+.overview {
     background-color: var(--surface);
+    text-align: center;
 }
-/* | STAGE1 SECTION [END] */
+/* | OVERVIEW SECTION [END] */
+
+/* | STAGES SECTION [START] */
+.stage .section .left,
+.stage .section .right {width: 50%;}
+/* | STAGES SECTION [END] */
 
 /* | MORE SECTION [START] */
 .more .h1 {text-align: center;}
@@ -62,9 +62,9 @@
 /* & RESPONSIVE VERSIONS */
 @media (max-width: 1024px) {
     .stage .section {flex-direction: column;}
-    .stage .section.row .left,
-    .stage .section.row .right {width: 100%;}
+    .stage .section .left,
+    .stage .section .right {width: 100%;}
 
-    .stage4 .section {flex-direction: column-reverse;}
+    .stage.stage4 .section {flex-direction: column-reverse;}
     .more .grid {max-width: 100%;}
 }

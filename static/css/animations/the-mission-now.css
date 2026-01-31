@@ -9,6 +9,8 @@
     transform: translateY(0);
     opacity: 1;
 }
+
+.hero .para {transition-delay: 100ms;}
 /* | HERO SECTION [END] */
 
 /* | CONTENT SECTIONS [START] */
