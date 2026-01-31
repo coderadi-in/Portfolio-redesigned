@@ -76,6 +76,7 @@
 .build-config .config-group {
     background-color: var(--surface);
     padding: 10px;
+    border-radius: 8px;
 }
 
 .build-config .selection-group {
@@ -118,3 +119,14 @@
 .build-config .selection:has(.input:checked) .status {
     opacity: 1;
 }
+/* | BUILD & CONFIG SECTION [END] */
+
+/* | SUMMARY SECTION [START] */
+.summary .left {
+    background-color: var(--surface);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.summary .link:hover {color: var(--primary);}
+.summary .btn {border-radius: 8px;}
