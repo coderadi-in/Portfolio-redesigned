@@ -70,3 +70,62 @@
     --fill: 100%
 }
 /* | LOOK SECTION [END] */
+
+/* | BUILD & CONFIG SECTION [START] */
+.build-config .config-group {
+    background-color: var(--surface);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.build-config .selection-group {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.build-config .selection {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid var(--border);
+    position: relative;
+}
+
+.build-config .selection .input {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    opacity: 0;
+}
+
+.build-config .selection .illustration {
+    padding: 10px;
+    background-color: var(--surface);
+    border-radius: 50px;
+}
+
+.build-config .selection .status {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: var(--primary);
+    opacity: 0;
+}
+
+.build-config .selection:has(.input:checked) {
+    background-color: var(--board-2);
+    border-color: var(--primary);
+}
+
+.build-config .selection:has(.input:checked) .status {
+    opacity: 1;
+}
+/* | BUILD & CONFIG SECTION [END] */
+
+/* | SUMMARY SECTION [START] */
+.summary .left {
+    background-color: var(--surface);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.summary .link:hover {color: var(--primary);}
+/* | SUMMARY SECTION [END] */
