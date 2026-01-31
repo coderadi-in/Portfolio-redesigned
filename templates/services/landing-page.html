@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="language" content="en">
+    <meta name="author" content="coderadi">
+    <meta name="theme-color" content="#1C69D4">
+    <meta name="robots" , content="index, follow">
+    <meta name="canonical" , content="https://coderadi.in">
+
+    <meta name="description"
+        content="Build a custom landing page for your product or service and start getting online enquiries.">
+    <meta name="keywords"
+        content="coderadi, coderadi.in, software developer, web developer, Aditya, Adi, coder aditya, coding greatness">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/icons/icon.ico') }}" type="image/x-icon">
+    <title>Landing page</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/services/landing-page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animations/landing-page.css') }}">
+</head>
+
+<body>
+    {% include 'components/header.html' %}
+    {% include 'components/msg.html' %}
+
+    <main class="main column gap-100">
+        <section class="hero">
+            <section class="section column center">
+                <h1 class="h1">Landing page</h1>
+                <span class="symbol">keyboard_arrow_down</span>
+            </section>
+        </section>
+
+        <section class="overview">
+            <section class="section column gap-20">
+                <p class="para">A landing page is a single web page with one clear goal. It is designed for a specific ad or link. Its job is to get a visitor to do one thing, like buy, sign up, or learn more.</p>
+            </section>
+        </section>
+
+        <section class="look">
+            <section class="section column gap-50">
+                <div class="head column v-center gap-10">
+                    <h1 class="h1">How a landing page look like</h1>
+                    <p class="para">Here're some major sections a landing page must have</p>
+                </div>
+
+                <div class="body grid gap-40">
+                    <div class="symptom column gap-10">
+                        <div class="symbol fl-icon">flag</div>
+                        <h3 class="h3">One Clear Goal</h3>
+                        <p class="para">Built for a single action, like signing up or buying one product.</p>
+                    </div>
+
+                    <div class="symptom column gap-10">
+                        <div class="symbol fl-icon">breaking_news</div>
+                        <h3 class="h3">Relevant Headline</h3>
+                        <p class="para">The main title must match the ad or link that brought the visitor.</p>
+                    </div>
+
+                    <div class="symptom column gap-10">
+                        <div class="symbol fl-icon">center_focus_strong</div>
+                        <h3 class="h3">Focused Content</h3>
+                        <p class="para">Only information and images that support the single goal.</p>
+                    </div>
+
+                    <div class="symptom column gap-10">
+                        <div class="symbol fl-icon">call_to_action</div>
+                        <h3 class="h3">Prominent Call-to-Action</h3>
+                        <p class="para">A very clear, compelling button ("Download," "Buy Now") that stands out.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    {% include 'components/footer.html' %}
+
+    <script type="module" src="{{ url_for('static', filename='js/base/observer.js') }}"></script>
+    <script type="module" src="{{ url_for('static', filename='js/services/landing-page.js') }}"></script>
+</body>
+
+</html>
